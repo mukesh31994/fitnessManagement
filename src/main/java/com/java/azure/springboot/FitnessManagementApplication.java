@@ -15,12 +15,12 @@ public class FitnessManagementApplication {
 	
 	@GetMapping("welcome")
 	public String getMessage() {
-		return "Welcome to Azure Web App for Containers ";
+		return "Welcome to Azure Web App Commit 2";
 	}
 	
 	@GetMapping("/")
 	public String home() {
-		return "Hello world by mukesh";
+		return "CICD Successfull";
 	}
 
 }
