@@ -20,7 +20,7 @@ public class FitnessManagementApplication {
 	
 	@GetMapping("/")
 	public String home() {
-		return "CICD successfully version 1";
+		return "CICD successfully version 3";
 	}
 
 }
