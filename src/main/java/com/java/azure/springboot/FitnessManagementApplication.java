@@ -24,10 +24,16 @@ public class FitnessManagementApplication {
 	@Autowired
 	EmployeeService lEmployeeService;
 
+//	@GetMapping("getAllEmployee")
+//	public ModelAndView getAllEmployee() {
+//		ArrayList<Employee> list = lEmployeeService.getAllEmployee();
+//		return new ModelAndView("ShowEmployee", "employeeList", list);
+//	}
+	
 	@GetMapping("getAllEmployee")
-	public ModelAndView getAllEmployee() {
+	public ArrayList<Employee> getAllEmployee() {
 		ArrayList<Employee> list = lEmployeeService.getAllEmployee();
-		return new ModelAndView("ShowEmployee", "employeeList", list);
+		return list;
 	}
 
 	@GetMapping("welcome")
