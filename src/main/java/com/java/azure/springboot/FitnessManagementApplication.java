@@ -42,8 +42,9 @@ public class FitnessManagementApplication {
 	
 	@GetMapping("getAllEmployee")
 	public ModelAndView getAllEmployee() {
-		ArrayList<Employee> list = lEmployeeService.getAllEmployee();
-		return new ModelAndView("ShowEmployee", "employeeList", list);
+//		ArrayList<Employee> list = lEmployeeService.getAllEmployee();
+		return new ModelAndView("ShowEmployee");
+//		return new ModelAndView("ShowEmployee", "employeeList", list);
 	}
 
 }
