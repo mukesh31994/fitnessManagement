@@ -20,7 +20,7 @@ public class EmployeeService {
 		ArrayList<Employee> lEmployeeList  = lEmployeeDao.getAllEmployee();
 		ArrayList<Employee> sortedList = (ArrayList<Employee>) lEmployeeList.stream()
 				.sorted(Comparator.comparingInt(Employee::getEmpId))
-//				.sorted(Comparator.comparingInt(Employee::getEmpId).reversed())
+//				 .sorted(Comparator.comparingInt(Employee::getEmpId).reversed())
 				.collect(Collectors.toList());
 		return sortedList;
 	}
