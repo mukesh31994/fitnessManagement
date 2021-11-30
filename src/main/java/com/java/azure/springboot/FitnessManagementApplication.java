@@ -24,11 +24,11 @@ public class FitnessManagementApplication {
 	@Autowired
 	EmployeeService lEmployeeService;
 	
-	@GetMapping("getAllEmployee")
-	public ArrayList<Employee> getAllEmployee() {
-		ArrayList<Employee> list = lEmployeeService.getAllEmployee();
-		return list;
-	}
+//	@GetMapping("getAllEmployee")
+//	public ArrayList<Employee> getAllEmployee() {
+//		ArrayList<Employee> list = lEmployeeService.getAllEmployee();
+//		return list;
+//	}
 
 	@GetMapping("welcome")
 	public String getMessage() {
@@ -40,10 +40,10 @@ public class FitnessManagementApplication {
 		return "CICD successfully version 3";
 	}
 	
-//	@GetMapping("getAllEmployee")
-//	public ModelAndView getAllEmployee() {
-//		ArrayList<Employee> list = lEmployeeService.getAllEmployee();
-//		return new ModelAndView("ShowEmployee", "employeeList", list);
-//	}
+	@GetMapping("getAllEmployee")
+	public ModelAndView getAllEmployee() {
+		ArrayList<Employee> list = lEmployeeService.getAllEmployee();
+		return new ModelAndView("ShowEmployee", "employeeList", list);
+	}
 
 }
