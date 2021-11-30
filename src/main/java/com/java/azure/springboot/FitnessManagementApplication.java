@@ -23,12 +23,6 @@ public class FitnessManagementApplication {
 
 	@Autowired
 	EmployeeService lEmployeeService;
-
-//	@GetMapping("getAllEmployee")
-//	public ModelAndView getAllEmployee() {
-//		ArrayList<Employee> list = lEmployeeService.getAllEmployee();
-//		return new ModelAndView("ShowEmployee", "employeeList", list);
-//	}
 	
 	@GetMapping("getAllEmployee")
 	public ArrayList<Employee> getAllEmployee() {
@@ -45,5 +39,11 @@ public class FitnessManagementApplication {
 	public String home() {
 		return "CICD successfully version 3";
 	}
+	
+//	@GetMapping("getAllEmployee")
+//	public ModelAndView getAllEmployee() {
+//		ArrayList<Employee> list = lEmployeeService.getAllEmployee();
+//		return new ModelAndView("ShowEmployee", "employeeList", list);
+//	}
 
 }
