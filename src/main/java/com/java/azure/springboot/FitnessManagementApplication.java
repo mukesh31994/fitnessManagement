@@ -37,7 +37,7 @@ public class FitnessManagementApplication {
 
 	@GetMapping("/")
 	public String home() {
-		return "CICD successfully version 3";
+		return "CICD successfully version 4";
 	}
 	
 //	@GetMapping("getAllEmployee")
