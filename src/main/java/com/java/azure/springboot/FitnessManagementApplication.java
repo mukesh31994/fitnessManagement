@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
@@ -13,7 +14,7 @@ import com.java.azure.entity.Employee;
 import com.java.azure.service.EmployeeService;
 
 @SpringBootApplication
-@RestController
+@Controller
 @ComponentScan({ "com.java.azure.service", "com.java.azure.dao" })
 public class FitnessManagementApplication {
 
@@ -40,10 +41,10 @@ public class FitnessManagementApplication {
 		return "CICD successfully version 4";
 	}
 	
-//	@GetMapping("getAllEmployee")
-//	public ModelAndView getAllEmployee() {
-//		ArrayList<Employee> list = lEmployeeService.getAllEmployee();
-//		return new ModelAndView("ShowEmployee", "employeeList", list);
-//	}
+	@GetMapping("getEmployee")
+	public ModelAndView getEmployee() {
+		ArrayList<Employee> list = lEmployeeService.getAllEmployee();
+		return new ModelAndView("ShowEmployee", "employeeList", list);
+	}
 
 }
